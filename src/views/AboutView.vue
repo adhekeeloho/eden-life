@@ -25,7 +25,7 @@ console.log(props);
     
     
                 <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group sm:col-span-12 xl:col-span-4 sm:flex-row xl:flex-col">
-                    <div class="block w-full transition duration-300 ease-in-out transform bg-center bg-sky-300 h-96  flex justify-center hover:scale-110"> <img class="h-72 w-64 mt-12 rounded-xl" :src="props" loading="lazy"></div>
+                    <div class=" w-full transition duration-300 ease-in-out transform bg-center bg-sky-300 h-96  flex justify-center hover:scale-110"> <img class="h-72 w-64 mt-12 rounded-xl" :src="props" loading="lazy"></div>
                     <div class="relative z-20 flex flex-col items-start justify-center w-full h-auto py-8 text-white bg-sky-400 border-t-0 border-sky-400 sm:h-full xl:h-auto px-7">
                         <a href="#_" class="inline-block text-xs font-semibold absolute sm:mb-5 xl:mb-0 sm:relative xl:absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-sky-300 bg-white">Read More</a>
                         <h2 class="mb-5 text-5xl font-bold"><a href="#_">Zen Dogs Rock</a></h2>
