@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <Movie/>
-      <HelloWorld/>
+    <Header/>
+      <DogList/>
   </div>
 </template>
 
 <script setup>
-import Movie from "../components/Movie.vue"
-import HelloWorld from "@/components/HelloWorld.vue";
+import DogList from "@/components/DogList.vue";
+import Header from "../components/Header.vue";
 
 </script>
