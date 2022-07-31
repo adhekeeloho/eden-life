@@ -1,31 +1,43 @@
 <script setup>
+import Header from "../components/Header.vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
 
 const props = route.params.id;
 console.log(props);
-
 </script>
 
 <template>
+    <Header/>
     
-<!-- Section 1 -->
-<section class="py-20 bg-gray-50">
-  <div class="container items-center max-w-6xl  px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
-    <div class="flex flex-wrap items-center -mx-3">
-      <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
-        <div class="w-full lg:max-w-md">
-          <h2 class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">Dog Facts</h2>
-          <p class="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">Dogs Are super Friendly and very loyal to their owners. Wanna Adopt.</p>
-
+    <!-- Dogs Details page -->
+    
+    
+    <!-- Section 1 -->
+    <section class="relative w-full bg-white">
+        <div class="absolute w-full h-32 "></div>
+        <div class="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
+            <p class="font-medium tracking-wide text-yellow-500 text-xl uppercase underline decoration-blue-100 decoration-double decoration-4 underline-offset-8 mb-3">Zen Dogs</p>
+            <h1 class="mb-1 text-2xl font-extrabold leading-none text-gray-700 lg:text-3xl xl:text-3xl sm:mb-3"><a href="#_">Adopt this dog.</a></h1>
+            <p class="text-lg font-medium text-gray-500 sm:text-2xl block">Did you know that dogs make 80% of humans on planet earth happy throughout their life time? Adopt me today and find out.</p>
+            <div class="grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
+    
+    
+                <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group sm:col-span-12 xl:col-span-4 sm:flex-row xl:flex-col">
+                    <div class="block w-full transition duration-300 ease-in-out transform bg-center bg-sky-300 h-96  flex justify-center hover:scale-110"> <img class="h-72 w-64 mt-12 rounded-xl" :src="props" loading="lazy"></div>
+                    <div class="relative z-20 flex flex-col items-start justify-center w-full h-auto py-8 text-white bg-sky-400 border-t-0 border-sky-400 sm:h-full xl:h-auto px-7">
+                        <a href="#_" class="inline-block text-xs font-semibold absolute sm:mb-5 xl:mb-0 sm:relative xl:absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-sky-300 bg-white">Read More</a>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Zen Dogs Rock</a></h2>
+                        <p class="mb-2 text-lg font-normal opacity-100 text-yellow-50">Learn about the amazings dogs we have.</p>
+    
+                    </div>
+                </div>
+    
+    
+            </div>
         </div>
-      </div>
-      <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img class="mx-auto sm:max-w-sm lg:max-w-full" :src="props"  alt="feature image"></div>
-    </div>
-  </div>
-</section>
-
+    </section>
 </template>
   
 
