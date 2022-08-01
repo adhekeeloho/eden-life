@@ -1,6 +1,7 @@
 <script setup>
-import Header from "../components/Header.vue";
+
 import { useRoute } from "vue-router";
+import Header from "@/components/Header.vue";
 
 const route = useRoute();
 
@@ -9,57 +10,61 @@ console.log(props);
 </script>
 
 <template>
-  <!-- Dogs Details page -->
-  <section class="relative mx-auto w-full bg-white">
-    <Header />
-    <div class="absolute w-full h-32"></div>
-    <div
-      class="relative  py-10 sm:py-12 md:py-16 md:px-10 max-w-7xl"
-    >
-      <p
-        class="font-medium tracking-wide text-yellow-500 text-xl uppercase underline decoration-blue-100 decoration-double decoration-4 underline-offset-8 mb-3"
+  <div class="us">
+    <Header/>
+    <!-- Dogs Details page -->
+    <div class="flex justify-end mb-3" ><a class="bg-pink-500 flex items-center mr-10 px-3 py-3 leading-none rounded-lg text-xs font-medium uppercase text-white" style="cursor: pointer;" @click="$router.push({name: 'home'})" >Back</a></div>
+    <div class="mx-10 mb-5" data-aos="zoom-in-up">
+      <p class="font-medium tracking-wide text-center text-yellow-500 text-xl uppercase underline decoration-blue-100 decoration-double decoration-4 underline-offset-8 mb-5"
       >
         Zen Dogs
       </p>
       <h1
-        class="mb-1 text-2xl font-extrabold leading-none text-gray-700 lg:text-3xl xl:text-3xl sm:mb-3"
+        class="mb-1 text-2xl text-center font-extrabold leading-none text-gray-700 lg:text-3xl xl:text-3xl sm:mb-3"
       >
         <a href="#_">Adopt this dog.</a>
       </h1>
-      <p class="text-lg font-medium text-gray-500 sm:text-2xl block">
+      <p class="text-lg text-center font-medium text-gray-500 sm:text-2xl block">
         Did you know that dogs make 80% of humans on planet earth happy
         throughout their life time? Adopt me today and find out.
       </p>
-      <div class="grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
-        <div
-          class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group sm:col-span-12 xl:col-span-4 sm:flex-row xl:flex-col"
-        >
-          <div
-            class="w-full transition duration-300 ease-in-out transform bg-center bg-sky-300 h-96 flex justify-center hover:scale-110"
-          >
-            <img
-              class="h-72 w-64 mt-12 rounded-xl"
-              :src="props"
-              loading="lazy"
-            />
-          </div>
-          <div
-            class="relative z-20 flex flex-col items-start justify-center w-full h-auto py-8 text-white bg-sky-400 border-t-0 border-sky-400 sm:h-full xl:h-auto px-7"
-          >
-            <a
-              href="#_"
-              class="inline-block text-xs font-semibold absolute sm:mb-5 xl:mb-0 sm:relative xl:absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-sky-300 bg-white"
-              >Read More</a
-            >
-            <h2 class="mb-5 text-5xl font-bold">
-              <a href="#_">Zen Dogs Rock</a>
-            </h2>
-            <p class="mb-2 text-lg font-normal opacity-100 text-yellow-50">
-              Learn about the amazings dogs we have.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+  
+<section class="bg-white" data-aos="zoom-in-up">
+    <div class="w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
+
+        <div class="flex flex-col items-center sm:px-5 md:flex-row">
+            <div class="w-full md:w-1/2">
+                <div class="block">
+                    <img class="object-cover w-full h-full rounded-lg max-h-64 sm:max-h-96" :src="props" loading="lazy">
+                </div>
+            </div>
+            <div class="flex flex-col items-start justify-center w-full h-full py-6 mb-6 md:mb-0 md:w-1/2">
+                <div class="flex flex-col items-start justify-center h-full space-y-3 transform md:pl-10 lg:pl-16 md:space-y-5">
+                    <div class="bg-pink-500 flex items-center pl-2 pr-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white ">
+                        <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <span>Adopt</span>
+                    </div>
+                    <h1 class="text-3xl font-bold text-gray-700 leading-none lg:text-4xl xl:text-4xl"><a href="#_">Amazing Dogs. Awesome Pets.</a></h1>
+                     <h2 class="mb-2 text-xl font-bold">
+              <a href="#_" class="text-blue-300 ">Zen Dogs Rock</a>
+            </h2>
+            <p class="mb-2 text-lg text-gray-700 font-normal opacity-100 ">
+              Learn about the amazing dogs we have.
+            </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  </div>
 </template>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.us{
+    font-family: 'Poppins', sans-serif;
+}
+</style>

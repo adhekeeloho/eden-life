@@ -1,5 +1,5 @@
 <template>
-  <div class="home it">
+  <div class="home">
     <Header/>
     <Search/>
       <DogList/>
@@ -14,8 +14,5 @@ import Header from "../components/Header.vue";
 </script>
 
 <style scoped>
-.it{
-  background-image: url(https://patternico.com/#ND5SOrnO49twN2MM);
-  background-size: cover;
-}
+
 </style>

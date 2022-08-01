@@ -5,6 +5,7 @@ export default createStore({
   state: {
     Dogslists: [],
     BreadLists: [],
+    isloading:false
   },
   getters: {
 
@@ -22,12 +23,15 @@ export default createStore({
   actions: {
     async fetchDogs({ commit }) {
       try {
+        this.state.isloading = true;
         const data = await axios.get("https://dog.ceo/api/breed/hound/images");
         commit("SET_DOGS", data.data.message);
         console.log(data);
       } catch (error) {
         alert(error);
         console.log(error);
+      } finally{
+        this.state.isloading = false;
       }
     },
     async searchDogs({ commit }) {

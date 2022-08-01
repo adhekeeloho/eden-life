@@ -1,7 +1,6 @@
 <template>
-
-
-<div class="  flex flex-col justify-center">
+ <!-- search component -->
+<div class=" us flex flex-col justify-center">
   <div class="relative  w-full sm:max-w-2xl sm:mx-auto">
     <div class="overflow-hidden z-0 rounded-full relative p-3">
       <div class="relative flex z-50 bg-white rounded-full">
@@ -50,6 +49,12 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.us{
+    font-family: 'Poppins', sans-serif;
+}
+
 .glow {
   top: -10%;
   left: -10%;
