@@ -1,12 +1,21 @@
 <template>
-  <div class="home">
-    <Movie/>
-      <HelloWorld/>
+  <div class="home it">
+    <Header/>
+    <Search/>
+      <DogList/>
   </div>
 </template>
 
 <script setup>
-import Movie from "../components/Movie.vue"
-import HelloWorld from "@/components/HelloWorld.vue";
+import Search from "../components/Search.vue";
+import DogList from "@/components/DogList.vue";
+import Header from "../components/Header.vue";
 
 </script>
+
+<style scoped>
+.it{
+  background-image: url(https://patternico.com/#ND5SOrnO49twN2MM);
+  background-size: cover;
+}
+</style>
