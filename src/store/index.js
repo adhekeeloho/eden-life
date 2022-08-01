@@ -7,13 +7,6 @@ export default createStore({
     BreadLists: [],
   },
   getters: {
-    // SET_VALUE: function (state, payload) {
-    //   Object.keys(payload).forEach((key) => {
-    //     if (state.hasOwnProperty.call(key)) {
-    //       state[key] = payload[key];
-    //     }
-    //   });
-    // },
 
     searchResult: (state) => state.Dogslists,
   },
@@ -46,14 +39,6 @@ export default createStore({
         alert(error);
         console.log(error);
       }
-    },
-
-    async getSearchResults({ commit }, query) {
-      const res = await axios.get(
-        `https://dog.ceo/api/breed/hound/images${query}`
-      );
-      // Execute the mutation which receive the data and pass to the state
-      commit("returnResults", res.data.message);
     },
   },
   modules: {},
